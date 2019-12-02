@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="row">
+		<%= image_tag @property.image.url(:medium), class: "property_image"%>
+		<div class="card col" id="property_info">
+			<div class="card-header" id="card_header">
+				<h2><%=@property.property_address%>
+				<%= link_to '<i class="material-icons">delete</i>'.html_safe, property_path, method: :delete, style: 'color:#FFFFFF; padding-left:10px;', class: "float-right"%>
+				<%= link_to '<i class="material-icons">edit</i>'.html_safe, edit_property_path, style: 'color:#FFFFFF;', class: "float-right"%>
+				</h2>
+			</div>
+			<div class="card-body align-items-center">
+				<p> 
+				<b>$ </b><%=@property.monthly_rent%> / month | 
+				<%= link_to @property.landlord.landlord_name, landlord_path(@property.landlord.id), style: 'color:#fff;' %>
+				</p>
+				<p><%=@property.description%></p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		 
+	</div>
+
+</div> 
+
+<%= render @property.applicants %>
+<%= render "applicants/form" %>

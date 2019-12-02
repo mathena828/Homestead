@@ -1,0 +1,32 @@
+<div class="container" style ='background-color: #C5C1C0; padding: 20px; border-radius: 7px; margin-top:30px; margin-bottom:30px;'>
+	<h2 class="title is-4 bold">Landlord Registration Form</h2>
+	<%= simple_form_for @landlord, html: {multipart: true} do |landlord| %>
+		
+		<% if @landlord.errors.any? %>
+			<div class = "errors">
+				<ul>
+					<% @landlord.errors.full_messages.each do |message| %>
+						<p class = "alert alert-danger" role="alert"><%= message %></p>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+		
+		<form>
+			
+			<div class="form-group">
+				<label>Landlord Name</label>
+				<%= landlord.input :landlord_name, required:false, label:false, input_html:{class: "form-control"}%>
+			</div>
+				<div class="form-group">
+				<label>Landlord Phone Number</label>
+				<%= landlord.input :landlord_phone_number, required:false, label:false, input_html:{class: "form-control"}%>
+			</div>
+
+			<%= landlord.submit 'Submit', class: 'btn btn-warning', style: 'margin-top: 10px; width: 100px; font-size: 1.15em;'%>
+			<%= landlord.button :button, "Cancel", type: "reset", class: "btn-outline-secondary", style: 'margin-top: 10px; width: 100px; font-size: 1.15em;' %>
+		</form>
+		
+
+	<% end %>
+</div>

@@ -1,0 +1,13 @@
+<div class="container" style="vertical-align: middle;">
+	<div class="card mx-auto" id="landlord-card">
+		<div class="card-header">
+			<h1 class="card-title"> <b><%=@landlord.landlord_name%></b>
+				<%= link_to '<i class="material-icons">delete</i>'.html_safe,landlord_path, method: :delete, style: 'color:#1A2930; padding-left:10px; padding-top:10px;', class: "float-right" %>
+				<%= link_to '<i class="material-icons">edit</i>'.html_safe,edit_landlord_path, style: 'color:#1A2930; padding-top:10px;', class: "float-right" %> 
+			</h1>
+		</div>
+		<div class="card-body">
+			<p> You can contact me at (US) <%=@landlord.landlord_phone_number%>. </p>
+		</h5>
+	</div>
+</div> 

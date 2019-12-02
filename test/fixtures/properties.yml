@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  property_address: 
+  monthly_rent: MyString
+  float: MyString
+
+two:
+  property_address: 
+  monthly_rent: MyString
+  float: MyString

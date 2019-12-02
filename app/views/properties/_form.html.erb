@@ -1,0 +1,52 @@
+<div class="container" style ='background-color: #C5C1C0; padding: 20px; border-radius: 7px; margin-top:30px; margin-bottom:30px;'>
+	<h2 class="title is-4 bold">Property Listing Form</h2>
+	<%= simple_form_for @property, html: {multipart: true} do |property| %>
+		
+	 	<% if @property.errors.any? %>
+			<div class = "errors">
+				<ul>
+					<% @property.errors.full_messages.each do |message| %>
+					<p class = "alert alert-danger" role="alert"><%= message %></p>
+					<% end %>
+				</ul>
+			</div>
+		<% end %> 
+		
+		<form>
+			<div class="form-group">
+				<label>Property Address</label>
+				<%= property.input :property_address, required:false, label:false, input_html:{class: "form-control"}%>
+			</div>
+
+			<div class="form-group">
+				<label>Monthly Rent</label>
+				<%= property.input :monthly_rent, required:false, label:false, input_html:{class: "form-control", id:"with-prepend"}%>
+			</div>
+
+			<div class="form-group">
+				<label>Description</label>
+				<%= property.input :description, required:false, label:false, input_html:{class: "form-control", rows:"5", id:"propertyDescription"}%>
+			</div>
+
+			<div class="form-group">
+				<label>Property Image</label> <br>
+
+				<label for="file-upload" class="custom-file-upload">
+					<i class="material-icons">get_app</i> Choose File
+				</label>
+				<%= property.input :image, required:false, label:false, input_html:{class: "form-control-file", type: "file", id: "file-upload"}%>
+			</div>
+
+			<div class="form-group">
+				<label>Landlord</label>
+				<%= collection_select(:property, :landlord_id, Landlord.all, :id, :landlord_name, { :multiple => false}, {:class => 'form-control'}) %>
+			</div>
+
+			<%= property.submit 'Submit', class: 'btn btn-warning', style: 'margin-top: 10px; width: 100px; font-size: 1.15em;'%>
+			<%= property.button :button, "Cancel", type: "reset", class: "btn-outline-secondary", style: 'margin-top: 10px; width: 100px; font-size: 1.15em;' %>
+
+		</form>
+		
+
+	<% end %>
+</div>

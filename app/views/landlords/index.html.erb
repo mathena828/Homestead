@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="jumbotron">
+		<h1 class="display-4">There's no place like Homestead.</h1>
+		<p class="lead">Homestead is an online rental property management system. It stores tenant application forms for real estate registered with the company.</p>
+		<hr class="my-4">
+		<p>Register as a landlord in order to manage property on this platform.</p>
+		<p class="lead">
+		<%= link_to "Click here to register a new Landlord",new_landlord_path, class:"btn btn-warning btn-lg" %> 
+		</p>
+    </div>
+    <div class="list-group" id="list-group-landlord">
+	<% @landlord.each do |landlord| %>
+		<li class="list-group-item">
+			<%= link_to landlord.landlord_name, landlord %>
+		</li>
+	<% end %>
+	</div>
+</div>
+<br>

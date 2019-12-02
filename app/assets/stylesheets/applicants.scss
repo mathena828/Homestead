@@ -1,0 +1,34 @@
+// Place all the styles related to the applicants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+#applicant_info{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	max-width: 100%;
+	border: 2px solid #1A2930;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 1.1em;
+	color: #1A2930;
+}
+
+.title {
+	font-family: 'Bebas Neue', cursive;
+}
+
+.form-group{
+	margin-top: 10px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#picker{
+  outline: none;
+  background-color: transparent;
+  border: 0px solid;
+  width: 1070px;
+}
+
+a:hover{
+	text-decoration:none;
+}

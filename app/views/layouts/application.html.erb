@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homestead</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap' %>
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Bebas+Neue|Kaushan+Script|Lato|Open+Sans&display=swap" rel="stylesheet' %>
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet' %>
+     <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp' %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="navbar-brand">Homestead</div>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <div id="hell"> <%= link_to "Properties",root_path, class: 'navbar-item' %> </div>
+          </li>
+          <li class="nav-item">
+            <%= link_to " Landlords", landlords_path, class: 'navbar-item' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to " Applicants", applicants_path, class: 'navbar-item' %>
+          </li>
+        </ul>
+    </nav>
+
+    <br>
+
+    <div class="container">
+      <% flash.each do |name, message| %>
+        <div class="alert alert-primary" role="alert">
+          <%= message %>
+        </div>
+      <% end %>
+    </div>
+    <%= yield %>
+
+
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<div class="container">
+	<div class="card" id="applicant_info">
+  		<div class="card-header">
+   	 		<h2> <b><%= applicant.applicant_name %></b>
+   	 			<%= link_to '<i class="material-icons">delete</i>'.html_safe, [applicant.property,applicant], method: :delete, style: 'color:#1A2930; padding-left:10px;', class: "float-right"%>
+				  <%= link_to '<i class="material-icons">edit</i>'.html_safe, edit_property_applicant_path(applicant.property,applicant), style: 'color:#1A2930;', class: "float-right"%>
+   	 		</h2> 
+  		</div>
+  		<ul class="list-group list-group-flush">
+  			<li class="list-group-item"> <b> Social Security Number: </b> <%= applicant.applicant_ssn %></li>
+		    <li class="list-group-item"> <b> Phone Number: </b> <%= applicant.applicant_phone_number %></li>
+		    <li class="list-group-item"> <b> Email: </b> <%= applicant.applicant_email %></li>
+		    <li class="list-group-item"> <b> Birthdate: </b> <%= applicant.applicant_birthdate %></li>
+  		</ul>
+	</div>
+</div>

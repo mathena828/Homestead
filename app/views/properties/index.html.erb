@@ -1,0 +1,30 @@
+<div class="container">
+	
+	 <div class="jumbotron">
+		<h1 class="display-4">There's no place like Homestead.</h1>
+		<p class="lead">Homestead is an online rental property management system. It stores tenant application forms for real estate registered with the company.</p>
+		<hr class="my-4">
+		<p>List your property and accept applications from our users.</p>
+		<p class="lead">
+		<%= link_to "Click here to add a new property",new_property_path, class:"btn btn-warning btn-lg" %> 
+		</p>
+    </div>
+
+	<% @property.each_slice(2) do |property| %>
+		<div class="row" >
+			<% property.each do |property| %>
+				<div class="col-md-6">
+					<div class="hovereffect">
+						<%= link_to property do%>
+							<%= image_tag property.image.url(:medium), class: 'img-responsive'%>
+							<div class="overlay">
+								<h2><%= property.property_address %></h2>
+								<p><b><%= property.landlord.landlord_name %></b></p>
+							</div>
+						<% end %>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	<% end %>
+</div>

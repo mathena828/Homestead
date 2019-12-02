@@ -1,0 +1,76 @@
+// Place all the styles related to the landlords controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#landlord-card{
+	max-width: 50%;
+	border: 2px solid #1A2930;
+	font-family: 'Open Sans Condensed', sans-serif;
+	p {
+		font-size: 1.3em;
+	}
+}
+
+.jumbotron {
+	background-color: #C5C1C0 !important;
+	p, hr {
+		font-family: 'Montserrat', sans-serif;
+	}
+	h1 {
+		font-family: 'Bebas Neue', cursive;
+	}
+	padding: 5em inherit;
+}
+
+.btn-warning {
+    color: #F7CE3E;
+}
+
+#list-group-landlord{
+	border: 5px solid #1A2930;
+	border-radius: 15px;
+	li:nth-child(odd) {
+		background-color: #1A2930; 
+		color: white;
+
+		a:link{
+		  color: #fff !important;
+		  text-decoration: none;
+		}
+		a:visited { 
+		  color: #fff !important;
+		}
+		a:hover { 
+		  padding-bottom: 2px;
+	 	  border-bottom: 1px solid #fff;
+		  color: #fff !important;
+		}
+		a:active { 
+		  color: #fff !important;
+		}
+	}
+
+	li{
+		color: #1A2930;
+		a:link{
+		  color: #1A2930 !important;
+		  text-decoration: none;
+		 }
+		 a:visited { 
+		  color: #1A2930 !important;
+		}
+		a:hover { 
+		  padding-bottom: 2px;
+	 	  border-bottom: 1px solid #1A2930;
+		  color: #1A2930 !important;
+		}
+		a:active { 
+		  color: #1A2930 !important;
+		}
+		
+	}
+}
+
+.btn {
+	font-family: 'Bebas Neue', cursive;
+}
