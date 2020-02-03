@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_29_024500) do
+ActiveRecord::Schema.define(version: 2020_02_03_155527) do
 
   create_table "applicants", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "applicant_ssn"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2019_11_29_024500) do
     t.index ["property_id"], name: "index_applicants_on_property_id"
   end
 
-  create_table "landlords", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "landlords", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "landlord_name"
     t.string "landlord_phone_number"
     t.datetime "created_at", precision: 6, null: false
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2019_11_29_024500) do
     t.bigint "image_file_size"
     t.datetime "image_updated_at"
     t.text "description"
-    t.bigint "landlord_id"
+    t.integer "landlord_id"
   end
 
   add_foreign_key "applicants", "properties"

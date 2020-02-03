@@ -8,12 +8,14 @@
 		<%= link_to "Click here to register a new Landlord",new_landlord_path, class:"btn btn-warning btn-lg" %> 
 		</p>
     </div>
-    <div class="list-group" id="list-group-landlord">
-	<% @landlord.each do |landlord| %>
-		<li class="list-group-item">
-			<%= link_to landlord.landlord_name, landlord %>
-		</li>
-	<% end %>
-	</div>
+    <% if Landlord.any? %>
+	    <div class="list-group" id="list-group-landlord">
+		<% @landlord.each do |landlord| %>
+			<li class="list-group-item">
+				<%= link_to landlord.landlord_name, landlord %>
+			</li>
+		<% end %>
+		</div>
+	<% end %>	
 </div>
 <br>

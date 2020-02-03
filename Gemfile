@@ -6,7 +6,7 @@ ruby '2.6.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4'
+gem 'mysql2', '~> 0.5.2'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -29,13 +29,14 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 
-
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
 # gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 # gem 'sassc-rails', '>= 2.1.0'
 gem 'bootstrap', '~> 4.3.1'
 gem 'paperclip', '~> 6.1'
 gem 'cocoon', '~> 1.2', '>= 1.2.14'
+
+gem "rack", ">= 2.0.8"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
