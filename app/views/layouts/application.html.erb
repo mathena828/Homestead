@@ -35,12 +35,19 @@
     <br>
 
     <div class="container">
-      <% flash.each do |name, message| %>
-        <div class="alert alert-primary" role="alert">
-          <%= message %>
-        </div>
+      <% flash.each do |type, message| %>
+        <% if type=="notice" %>
+          <div class="alert alert-secondary" role="alert">
+            <%= message %>
+          </div>
+        <% else %>
+          <div class="alert alert-danger" role="alert">
+            <%= message %>
+          </div>
+        <% end %>
       <% end %>
     </div>
+
     <%= yield %>
 
 
